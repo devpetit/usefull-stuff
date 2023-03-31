@@ -63,5 +63,5 @@ We have two branches, master and feature. The current branch is master.
 ![New commits](./images/step2-new-commits.png)
 - The two old commits will be cleared / detached (similar to `git reset --hard`).
 ![Old commits detached](./images/step3-cold-commits-removed.png)
-- The branch pointers will look like this:
+- The branch pointers will look like this:  
 ![Final state](./images/step4-final.png)
