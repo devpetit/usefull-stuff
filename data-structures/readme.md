@@ -30,3 +30,4 @@ In C#, Dictionary is a generic collection which is generally used to store key/v
 - In Dictionary, you can only store same types of elements.
 - The capacity of a Dictionary is the number of elements that Dictionary can hold
 
+![Dictionary internals](./images/dictionary-internals.jpg)
