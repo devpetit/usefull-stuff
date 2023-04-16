@@ -79,6 +79,8 @@ Why is this problematic?  Flowing SynchronizationContext as part of ExecutionCon
 
  I previously mentioned that the “builders” for async methods were the types responsible for flowing ExecutionContext in async methods, and these builders do live in mscorlib, and they do use the internal overloads… as such, SynchronizationContext is not flowed as part of ExecutionContext across awaits (this, again, is separate from how task awaiters support capturing the SynchronizationContext and Post’ing back to it).
 
+> **In short, SynchronizationContext.Current does not “flow” across await points.**
+
 > I believe the following decision tree shows how it is working, if the await is called from the Task then simply schedule the continuation work on the ThreadPool otherwise check for the SynchronizationContext presents (probably these are the internal calls mentioned above).
 
 ![](./images/capture-synchronizationcontext-decision.png)
